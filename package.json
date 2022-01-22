@@ -55,7 +55,7 @@
             "npm run lint"
         ],
         "src/**/*.{css,scss}": [
-          "npm run pretty"
+            "npm run pretty"
         ]
     }
 }
