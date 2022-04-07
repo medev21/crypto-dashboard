@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import storeConfig from './store/configureStore';
+import storeConfig from './redux/store/configureStore';
 
 const store = storeConfig();
 

@@ -1,8 +1,21 @@
-import React from 'react';
+// dependencies
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+
+// actionCreators
+import { getCoinsByMarket } from './redux/dashboard/actionCreators';
+
+// assets
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getCoinsByMarket());
+    }, []);
+
     return (
         <div className="App">
             <header className="App-header">
@@ -21,6 +34,6 @@ function App() {
             </header>
         </div>
     );
-}
+};
 
 export default App;
