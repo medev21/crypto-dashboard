@@ -5,16 +5,19 @@ import { useDispatch } from 'react-redux';
 // actionCreators
 import { getCoinsByMarket } from './redux/dashboard/actionCreators';
 
+// hooks
+import useFirstMount from './common/hooks/useFirstMount';
+
 // assets
 import logo from './logo.svg';
 import './App.css';
 
-const App: React.FC = () => {
+const App: React.VFC = () => {
     const dispatch = useDispatch();
 
-    useEffect(() => {
+    useFirstMount(() => {
         dispatch(getCoinsByMarket());
-    }, []);
+    });
 
     return (
         <div className="App">
