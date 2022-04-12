@@ -1,6 +1,6 @@
 import { call, takeLatest } from 'redux-saga/effects';
 import { fetchApi } from '../../client_services/fetchAPI';
-import { types } from './actionTypes';
+import { DashboardTypes } from './actionTypes';
 
 interface Coin {
     current_price: number;
@@ -35,7 +35,7 @@ function* getCryptoCoins() {
 }
 
 function* DashboardSagas() {
-    yield takeLatest(types.GET_COINS_BY_MARKET, getCryptoCoins);
+    yield takeLatest(DashboardTypes.GET_COINS_BY_MARKET, getCryptoCoins);
 }
 
 export default DashboardSagas;
