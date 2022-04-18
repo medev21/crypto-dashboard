@@ -29,8 +29,6 @@ function* getCryptoCoins() {
                 symbol,
             };
         });
-
-        console.log('data', adjustedData);
     } catch (error) {}
 }
 
