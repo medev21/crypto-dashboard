@@ -8,9 +8,6 @@ import { getCoinsByMarket } from './redux/dashboard/actionCreators';
 // hooks
 import useFirstMount from './common/hooks/useFirstMount';
 
-// assets
-import './App.css';
-
 const App: React.VFC = () => {
     const dispatch = useDispatch();
 
