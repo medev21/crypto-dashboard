@@ -7,13 +7,13 @@ import {
     GetCoinsByMarketFailure,
 } from './actionTypes';
 
-export const getCoinsByMarket = (): GetCoinsByMarketRequest => {
+const getCoinsByMarket = (): GetCoinsByMarketRequest => {
     return {
         type: DashboardTypes.GET_COINS_BY_MARKET,
     };
 };
 
-export const getCoinsByMarketSuccess = (
+const getCoinsByMarketSuccess = (
     payload: GetCoinsByMarketSuccessPayload
 ): GetCoinsByMarketSuccess => {
     return {
@@ -22,11 +22,17 @@ export const getCoinsByMarketSuccess = (
     };
 };
 
-export const getCoinsByMarketFailure = (
+const getCoinsByMarketFailure = (
     payload: GetCoinsByMarketFailurePayload
 ): GetCoinsByMarketFailure => {
     return {
         type: DashboardTypes.GET_COINS_BY_MARKET_ERROR,
         payload,
     };
+};
+
+export const DASHBOARD_CREATORS = {
+    getCoinsByMarket,
+    getCoinsByMarketSuccess,
+    getCoinsByMarketFailure,
 };

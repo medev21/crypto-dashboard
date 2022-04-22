@@ -3,7 +3,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 
 // actionCreators
-import { getCoinsByMarket } from './redux/dashboard/actionCreators';
+import { DASHBOARD_CREATORS } from './redux/dashboard/actionCreators';
 
 // hooks
 import useFirstMount from './common/hooks/useFirstMount';
@@ -12,7 +12,7 @@ const App: React.VFC = () => {
     const dispatch = useDispatch();
 
     useFirstMount(() => {
-        dispatch(getCoinsByMarket());
+        dispatch(DASHBOARD_CREATORS.getCoinsByMarket());
     });
 
     return <div className="App">app goes here</div>;

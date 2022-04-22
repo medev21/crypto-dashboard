@@ -1,7 +1,12 @@
+// dependencies
 import { call, put, takeLatest } from 'redux-saga/effects';
+
+// methods
 import { fetchApi } from '../../client_services/fetchAPI';
+import { DASHBOARD_CREATORS } from './actionCreators';
+
+// types/models
 import { DashboardTypes } from './actionTypes';
-import { getCoinsByMarketSuccess } from './actionCreators';
 import { RawCoin } from '../../common/models/ICoins';
 
 function* getCryptoCoins() {
@@ -20,7 +25,9 @@ function* getCryptoCoins() {
                 symbol,
             };
         });
-        yield put(getCoinsByMarketSuccess({ coins: adjustedData }));
+        yield put(
+            DASHBOARD_CREATORS.getCoinsByMarketSuccess({ coins: adjustedData })
+        );
     } catch (error) {}
 }
 
