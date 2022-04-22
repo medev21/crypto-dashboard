@@ -1,21 +1,12 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import { fetchApi } from '../../client_services/fetchAPI';
 import { DashboardTypes } from './actionTypes';
-
-interface Coin {
-    current_price: number;
-    id: string;
-    image: string;
-    market_cap: number;
-    symbol: string;
-    [x: string]: number | string;
-}
-
-type CoinData = Coin[];
+import { getCoinsByMarketSuccess } from './actionCreators';
+import { RawCoin } from '../../common/models/ICoins';
 
 function* getCryptoCoins() {
     try {
-        const data: CoinData = yield call(
+        const data: RawCoin[] = yield call(
             fetchApi,
             'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
         );
@@ -29,6 +20,7 @@ function* getCryptoCoins() {
                 symbol,
             };
         });
+        yield put(getCoinsByMarketSuccess({ coins: adjustedData }));
     } catch (error) {}
 }
 

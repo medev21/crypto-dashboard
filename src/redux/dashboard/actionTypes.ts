@@ -1,4 +1,4 @@
-import { ICoins } from '../../common/models/ICoins';
+import { FormattedCoin } from '../../common/models/ICoins';
 
 export enum DashboardTypes {
     GET_COINS_BY_MARKET = 'dashboardActionTypes/GET_COINS_BY_MARKET',
@@ -7,13 +7,13 @@ export enum DashboardTypes {
 }
 
 export interface GetState {
-    coins: ICoins[];
+    coins: FormattedCoin[];
     error: string | null;
     pending: boolean;
 }
 
 export interface GetCoinsByMarketSuccessPayload {
-    coins: ICoins[];
+    coins: FormattedCoin[];
 }
 
 export interface GetCoinsByMarketFailurePayload {
