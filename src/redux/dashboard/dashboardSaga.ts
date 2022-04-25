@@ -28,7 +28,15 @@ function* getCryptoCoins() {
         yield put(
             DASHBOARD_CREATORS.getCoinsByMarketSuccess({ coins: adjustedData })
         );
-    } catch (error) {}
+    } catch (error) {
+        if (error instanceof Error) {
+            yield put(
+                DASHBOARD_CREATORS.getCoinsByMarketFailure({
+                    error: error.message,
+                })
+            );
+        }
+    }
 }
 
 function* DashboardSagas() {
