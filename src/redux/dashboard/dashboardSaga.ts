@@ -9,7 +9,7 @@ import { DASHBOARD_CREATORS } from './actionCreators';
 import { DashboardTypes } from './actionTypes';
 import { RawCoin } from '../../common/models/ICoins';
 
-function* getCryptoCoins() {
+export function* getCryptoCoins(): any {
     try {
         const data: RawCoin[] = yield call(
             fetchApi,
