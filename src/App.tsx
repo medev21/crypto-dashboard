@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { DASHBOARD_CREATORS } from './redux/dashboard/actionCreators';
 
 // hooks
-import useFirstMount from './common/hooks/useFirstMount';
+import useFirstMount from 'common/hooks/useFirstMount';
 
 const App: React.VFC = () => {
     const dispatch = useDispatch();
