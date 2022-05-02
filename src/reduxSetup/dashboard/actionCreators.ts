@@ -5,7 +5,7 @@ import {
     GetCoinsByMarketFailurePayload,
     GetCoinsByMarketSuccess,
     GetCoinsByMarketFailure,
-} from './actionTypes';
+} from 'reduxSetup/dashboard/actionTypes';
 
 const getCoinsByMarket = (): GetCoinsByMarketRequest => {
     return {

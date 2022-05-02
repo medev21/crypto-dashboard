@@ -3,7 +3,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 
 // actionCreators
-import { DASHBOARD_CREATORS } from './redux/dashboard/actionCreators';
+import { DASHBOARD_CREATORS } from 'reduxSetup/dashboard/actionCreators';
 
 // hooks
 import useFirstMount from 'common/hooks/useFirstMount';

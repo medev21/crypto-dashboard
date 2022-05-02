@@ -2,12 +2,12 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 
 // methods
-import { fetchApi } from '../../client_services/fetchAPI';
-import { DASHBOARD_CREATORS } from './actionCreators';
+import { fetchApi } from 'client_services/fetchAPI';
+import { DASHBOARD_CREATORS } from 'reduxSetup/dashboard/actionCreators';
 
 // types/models
-import { DashboardTypes } from './actionTypes';
-import { RawCoin } from '../../common/models/ICoins';
+import { DashboardTypes } from 'reduxSetup/dashboard/actionTypes';
+import { RawCoin } from 'common/models/ICoins';
 
 export function* getCryptoCoins(): any {
     try {

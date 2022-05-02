@@ -1,4 +1,8 @@
-import { DashboardTypes, GetActions, GetState } from './actionTypes';
+import {
+    DashboardTypes,
+    GetActions,
+    GetState,
+} from 'reduxSetup/dashboard/actionTypes';
 
 const initialState: GetState = {
     coins: [],

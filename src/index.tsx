@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from 'App';
+import reportWebVitals from 'reportWebVitals';
 import { Provider } from 'react-redux';
-import storeConfig from './redux/store/configureStore';
+import storeConfig from 'reduxSetup/store/configureStore';
 
 const store = storeConfig();
 

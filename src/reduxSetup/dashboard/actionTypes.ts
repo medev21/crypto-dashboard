@@ -1,4 +1,4 @@
-import { FormattedCoin } from '../../common/models/ICoins';
+import { FormattedCoin } from 'common/models/ICoins';
 
 export enum DashboardTypes {
     GET_COINS_BY_MARKET = 'dashboardActionTypes/GET_COINS_BY_MARKET',
