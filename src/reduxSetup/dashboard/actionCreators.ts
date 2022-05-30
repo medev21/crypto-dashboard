@@ -7,9 +7,15 @@ import {
     GetCoinsByMarketFailure,
 } from 'reduxSetup/dashboard/actionTypes';
 
-const getCoinsByMarket = (): GetCoinsByMarketRequest => {
+// types
+import { CoinsByMarketPayload } from 'client_services/services/types';
+
+const getCoinsByMarket = (
+    payload?: CoinsByMarketPayload
+): GetCoinsByMarketRequest => {
     return {
         type: DashboardTypes.GET_COINS_BY_MARKET,
+        payload: payload || [],
     };
 };
 
