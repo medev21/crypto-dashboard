@@ -6,3 +6,10 @@ const isTrivial = (danger.github.pr.body + danger.github.pr.title).includes(
 if (!hasChangelog && !isTrivial) {
   warn("Please add a changelog entry for your changes here.");
 }
+
+/**
+ * TODO: ADD PR TITLE CHECK
+ * CHECK FOR NUMBER OF FILES TO REVIEW - WARN
+ * CHECK PR TITLE FORMAT - DONT PASS ON FAILURE
+ */
+
