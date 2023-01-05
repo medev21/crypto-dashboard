@@ -8,7 +8,8 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "pretty": "prettier --write ."
+        "pretty": "prettier --write .",
+        "typecheck": "npx tsc"
     },
     "author": "Martin Benavides (medev21)",
     "license": "ISC",
