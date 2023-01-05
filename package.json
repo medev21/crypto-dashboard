@@ -8,7 +8,7 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "pretty": "prettier --single-quote --tab-width 4 --write ."
+        "pretty": "prettier --write ."
     },
     "author": "Martin Benavides (medev21)",
     "license": "ISC",
