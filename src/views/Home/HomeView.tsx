@@ -33,6 +33,7 @@ export const HomeView = () => {
                     <img src={entry.image} />
                 </div>
             ))}
+            <h1 className="text-3xl font-bold underline">this is a teset</h1>
         </>
     );
 };
