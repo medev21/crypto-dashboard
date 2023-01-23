@@ -14,6 +14,7 @@
     "author": "Martin Benavides (medev21)",
     "license": "ISC",
     "dependencies": {
+        "@mui/base": "^5.0.0-alpha.114",
         "next": "^13.1.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
