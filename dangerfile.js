@@ -11,6 +11,9 @@ if(danger.github.pr.additions + danger.github.pr.deletions > bigPRThreshold) {
 
 /**
  * Check if PR title follows expected format
+ * 
+ * TODO: Add checks for commit lint options
+ * feat, bug, refactor, etc
  */
 const prTitlePrefix = "^feat: "
 const regexp = new RegExp(prTitlePrefix, "g")
