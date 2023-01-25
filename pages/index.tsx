@@ -1,6 +1,7 @@
-const Home = () => {
-    const text = 'hellow';
-    return <h1>{text}</h1>;
+import HomeView from 'src/views/Home';
+
+const MainPage = () => {
+    return <HomeView />;
 };
 
-export default Home;
+export default MainPage;
