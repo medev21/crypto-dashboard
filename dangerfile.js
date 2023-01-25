@@ -14,6 +14,6 @@ if(danger.github.pr.additions + danger.github.pr.deletions > bigPRThreshold) {
  */
 const prTitlePrefix = "^feat: "
 const regexp = new RegExp(prTitlePrefix, "g")
-if(regexp.test(prTitlePrefix)) {
+if(!regexp.test(prTitlePrefix)) {
     fail("Please change the PR title format")
 }
