@@ -11,12 +11,28 @@ if(danger.github.pr.additions + danger.github.pr.deletions > bigPRThreshold) {
 
 /**
  * Check if PR title follows expected format
+ * with the following change types
  * 
- * TODO: Add checks for commit lint options
- * feat, bug, refactor, etc
+ * example format:
+ * "feat: <PR title>"
  */
-const prTitlePrefix = "^feat: "
-const regexp = new RegExp(prTitlePrefix, "g")
-if(!regexp.test(prTitlePrefix)) {
+const changeType = [
+    'build',
+    'chore',
+    'ci',
+    'docs',
+    'feat',
+    'fix',
+    'perf',
+    'refactor',
+    'revert',
+    'style',
+    'test',
+].join("|");
+
+const prTitlePrefix = `^(${changeType}): .+`;
+const regexp = new RegExp(prTitlePrefix, "g");
+
+if(!regexp.test(danger.github.pr.title)) {
     fail("Please change the PR title format")
 }
