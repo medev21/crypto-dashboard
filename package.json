@@ -4,6 +4,7 @@
     "description": "a collection of favorite cryptos",
     "main": "index.js",
     "scripts": {
+        "preinstall": "npx only-allow pnpm",
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "next dev",
         "build": "next build",
@@ -49,13 +50,13 @@
     },
     "lint-staged": {
         "pages/**/*.{js,jsx,ts,tsx,json}": [
-            "npm run pretty"
+            "pnpm run pretty"
         ],
         "src/**/*.{js,jsx,ts,tsx,json}": [
-            "npm run pretty"
+            "pnpm run pretty"
         ],
         "src/**/*.{css,scss}": [
-            "npm run pretty"
+            "pnpm run pretty"
         ]
     }
 }

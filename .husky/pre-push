@@ -2,7 +2,7 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 # TS type check
-npm run typecheck
+pnpm run typecheck
 
 # validate git branch name
 local_branch_name="$(git rev-parse --abbrev-ref HEAD)"
