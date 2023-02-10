@@ -1,9 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-# TS type check
-pnpm run typecheck
-
 # validate git branch name
 local_branch_name="$(git rev-parse --abbrev-ref HEAD)"
 
@@ -15,3 +12,9 @@ if [[ ! $local_branch_name =~ $valid_branch_regex ]]; then
     echo "$message"
     exit 1
 fi
+
+# TS type check
+pnpm run typecheck
+
+# check tests
+pnpm test:ci
