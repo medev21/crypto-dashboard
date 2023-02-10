@@ -14,8 +14,12 @@
         "isolatedModules": true,
         "jsx": "preserve",
         "baseUrl": ".",
-        "incremental": true
+        "incremental": true,
+        "paths": {
+            "src/*": ["./src/*"]
+        },
+        // "types": ["vitest/globals"]
     },
     "exclude": ["node_modules"],
-    "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", "next.config.js"]
+    "include": ["setupTests.ts", "vitest.config.ts","**/*.ts", "**/*.tsx", "next-env.d.ts", "next.config.js"]
 }

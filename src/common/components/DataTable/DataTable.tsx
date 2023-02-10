@@ -32,7 +32,7 @@ export const DataTable = ({ columns, entries }: DataTableI) => {
                     </TableHead>
                     <TableBody>
                         {entries.map((entry) => (
-                            <TableRow key={getUUID()}>
+                            <TableRow>
                                 <TableCell className="border-none">
                                     <img src={entry.image} />
                                     <span>{entry.name}</span>
